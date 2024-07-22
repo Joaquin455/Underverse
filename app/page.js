@@ -1,11 +1,14 @@
 import Image from "next/image";
 import styles from "./page.module.css";
+import Link from "next/link";
 
 export default function Home() {
   
   return (
     <>
-    <div className="Background"></div>
+    <div className="background">
+        <Image src="/Images/Doodle-Sphere.jpg" alt="background" fill={true} />
+    </div>
          <nav>
             <h1>
                 <span>UNDERVERSE</span>
@@ -31,11 +34,11 @@ export default function Home() {
                     Anadir comentarios
                 </button>
             </a>
-            <a href="#login">
+            <Link href={"/auth"}>
                 <button>
-                    Iniciar Sesión
+                    Login
                 </button>
-            </a>
+            </Link>  
            </section>
             <span className="menu" id="menu">
                 <a href="#inicio">
@@ -58,14 +61,13 @@ export default function Home() {
                         Comentarios
                     </button>
                 </a>
-                <a href="#login" >
-                    <button>
-                        Iniciar Sesión
-                    </button>
-                </a>
+                <Link href={"/auth"}>
+                <button>
+                    Login
+                </button>
+            </Link> 
             </span>
-            <label for="check" className="open-menu" ><i className="fas fa-bars"></i></label>
-        </nav>
+            </nav>
         <div className="init" id="inicio">
             <section>
                 <h1>
